@@ -23,7 +23,7 @@ clean:
 	rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME) plazza_tests
+	rm -f $(NAME)
 
 re: fclean all
 
