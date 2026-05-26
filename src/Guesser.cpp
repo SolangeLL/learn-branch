@@ -38,7 +38,7 @@ int Guesser::CompareUserAnswer(const std::string &guess)
 
 void Guesser::WinGame(void)
 {
-    std::cout << "Bravo gg t'as gagné (pas) 67 t'es trop fort" << std::endl;
+    std::cout << "Congratulations, you win this beautiful game! 6767676767" << std::endl;
     m_isRunning = false;
 }
 
