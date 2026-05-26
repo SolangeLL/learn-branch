@@ -6,19 +6,19 @@
 Guesser::Guesser(
     int numberLives,
     unsigned int min,
-    unsigned int max
-) : m_numberLives(numberLives),
-    m_min(min),
-    m_max(max)
+    unsigned int max) : m_numberLives(numberLives),
+                        m_min(min),
+                        m_max(max)
 {
     std::random_device rd;
     std::mt19937 range(rd());
-    std::uniform_int_distribution<std::mt19937::result_type> dist(1,10);
+    std::uniform_int_distribution<std::mt19937::result_type> dist(1, 10);
 
     m_numberToGuess = dist(rd);
     std::cout << "================ GUESSING GAME ================" << std::endl;
     std::cout << "Bienvenue au jeu où tu dois deviner le nombre ? (j'avais pas de nom)" << std::endl;
-    std::cout << "La valeur se trouve entre " << m_min << " et " << m_max << "\n" << std::endl;
+    std::cout << "La valeur se trouve entre " << m_min << " et " << m_max << "\n"
+              << std::endl;
 }
 
 std::string Guesser::GetUserInput(void) const
@@ -51,9 +51,11 @@ void Guesser::LoseGame(void)
 bool Guesser::IsWinCondition(int value) const
 {
     if (value > 0)
-        std::cout << "C'est trop haut\n" << std::endl;
+        std::cout << "C'est trop haut\n"
+                  << std::endl;
     else if (value < 0)
-        std::cout << "C'est trop bas\n" << std::endl;
+        std::cout << "C'est trop bas\n"
+                  << std::endl;
     else
         return true;
     return false;
