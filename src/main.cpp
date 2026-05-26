@@ -1,5 +1,4 @@
 #include "Guesser.hpp"
-#include <iostream>
 
 int main(void)
 {
@@ -17,5 +16,5 @@ int main(void)
             guesser.LoseGame();
     }
     
-    return 0;
+    return SUCCESS;
 }
